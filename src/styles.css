@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Merriweather');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', 'Merriweather', Arial, san-serif;
+    font-weight: 300; 
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

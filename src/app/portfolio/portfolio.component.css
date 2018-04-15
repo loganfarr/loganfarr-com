@@ -1,0 +1,23 @@
+.header {
+    padding: 50px;
+}
+
+.portfolio .row {
+    display: grid;
+    grid: repeat(2, 400px) / repeat(4, 25%);
+}
+
+.project,.featured-project {
+    border: 1px solid #e1e1e1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.featured-project:first-child {
+    grid-area: span 2 / span 2;
+}
+
+.featured-project:last-child {
+    grid-area: 1 / 3 / 3 / 5;
+}

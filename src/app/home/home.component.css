@@ -1,0 +1,25 @@
+.background {
+    display: grid;
+    grid: repeat(5, 200px) / repeat(10, 10%);
+    position: absolute;
+    transform: skewY(12deg);
+    transform-origin: 0;
+    width: 100%;
+    height: 100%;
+    top: -60%;
+    /*background: linear-gradient(to top, rgba(227,246,252,1) 0%,rgba(83,203,241,1) 40%,rgba(5,136,183,1) 100%);*/
+    z-index: -1;
+}
+
+.background :nth-child(1) {
+    grid-column: span 3;
+}
+
+.background :nth-child(2) {
+    grid-area: 3 / span 3 / auto / -1;
+}
+
+.background :nth-child(3) {
+    grid-row: 4;
+    grid-column: span 5;
+}
