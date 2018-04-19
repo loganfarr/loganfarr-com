@@ -1,5 +1,41 @@
 .header {
     padding: 50px;
+    min-height: 500px;
+}
+
+.skills {
+    display: grid;
+    grid: repeat(6, 200px) / repeat(3, 200px);
+    position: absolute;
+    top: 0; 
+    right: 0;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transform: rotateY(-20deg) rotateX(50deg) rotateZ(12deg);
+}
+
+.magento {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.drupal {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+}
+
+.skill img {
+    filter: drop-shadow(10px 10px 0px #aaa);
+    transition: 0.2s all;
+}
+
+.skill img:hover {
+    filter: drop-shadow(15px 15px 5px #ccc);
 }
 
 .portfolio .row {
