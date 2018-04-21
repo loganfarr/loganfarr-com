@@ -5,10 +5,10 @@
 
 .skills {
     display: grid;
-    grid: repeat(6, 200px) / repeat(3, 200px);
+    grid: repeat(6, 200px) / repeat(4, 200px);
     position: absolute;
     top: 0; 
-    right: 0;
+    right: 30px;
 }
 
 .skill {
@@ -16,7 +16,51 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
-    transform: rotateY(-20deg) rotateX(50deg) rotateZ(12deg);
+    /*transform: rotateY(-20deg) rotateX(50deg) rotateZ(12deg);*/
+}
+
+.tile-wrapper {
+    width:100%;
+    perspective: 250px;    
+    filter: drop-shadow(2px 8px 5px #aaa);
+    transition: 0.2s all;
+}
+
+.tile-wrapper:hover {
+    filter: drop-shadow(2px 8px 3px #ccc);
+}
+
+.tile {
+    transform-style: preserve-3d;
+    transform: rotateX(-40deg) rotateY(-32deg);
+    width: 5em;
+}
+
+.tile .side {
+    position: absolute;
+    width: 5em;
+    height: 10px; 
+    background: #252f3e85;
+    border: 1px solid #00000050;
+    line-height: 2em;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tile .side.front { transform: translateZ(2.5em); }
+.tile .side.left { transform: rotateY(90deg)  translateZ(2.5em); }
+.tile .side.top { transform: rotateX(90deg)  translateZ(2.5em); padding: 15px; }
+.tile .side.right { transform: rotateY(-90deg)  translateZ(2.5em); }
+.tile .side.bottom { transform: rotateX(-90deg)  translateZ(-2em); }
+.tile .side.back { transform: rotateY(180deg) translateZ(2.5em); }
+
+.tile .side.top,
+.tile .side.bottom {
+    height: 5em;
 }
 
 .magento {
@@ -30,12 +74,13 @@
 }
 
 .skill img {
-    filter: drop-shadow(10px 10px 0px #aaa);
+    /*filter: drop-shadow(10px 10px 0px #aaa);*/
     transition: 0.2s all;
+    width: 100%;
 }
 
 .skill img:hover {
-    filter: drop-shadow(15px 15px 5px #ccc);
+    /*filter: drop-shadow(15px 15px 5px #ccc);*/
 }
 
 .portfolio .row {
